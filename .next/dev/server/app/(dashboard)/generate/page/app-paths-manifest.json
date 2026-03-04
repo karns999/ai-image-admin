@@ -1,0 +1,3 @@
+{
+  "/(dashboard)/generate/page": "app/(dashboard)/generate/page.js"
+}

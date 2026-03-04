@@ -1,0 +1,41 @@
+[00:00:08.699] Server  WARN    ⚠ The "middleware" file convention is deprecated. Please use "proxy" instead. Learn more: https://nextjs.org/docs/messages/middleware-to-proxy
+[00:00:10.949] Server  LOG     ✓ Ready in 8s
+[00:00:11.050] Server  ERROR   ⨯ Error: Invalid supabaseUrl: Must be a valid HTTP or HTTPS URL.
+[00:00:12.982] Browser ERROR   uncaughtError: Error: Invalid supabaseUrl: Must be a valid HTTP or HTTPS URL.
+[00:00:15.847] Server  LOG     ○ Compiling /_not-found/page ...
+[00:00:58.574] Server  LOG       Reload env: .env.local
+[00:00:58.634] Server  LOG     ✓ Compiled in 5ms
+[00:00:59.809] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:01:19.525] Server  LOG       Reload env: .env.local
+[00:01:19.611] Server  LOG     ✓ Compiled in 11ms
+[00:01:22.180] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:11:26.443] Server  LOG     ✓ Compiled in 48ms
+[00:11:28.334] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:12:02.151] Server  LOG     ✓ Compiled in 152ms
+[00:12:41.338] Server  LOG     ✓ Compiled in 150ms
+[00:12:45.693] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:12:46.946] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:13:05.948] Server  LOG     ✓ Compiled in 142ms
+[00:13:19.769] Server  LOG     ✓ Compiled in 137ms
+[00:13:39.152] Server  LOG     ✓ Compiled in 162ms
+[00:14:00.311] Server  LOG     ✓ Compiled in 38ms
+[00:14:20.220] Server  LOG     ✓ Compiled in 33ms
+[00:14:39.089] Server  LOG     ✓ Compiled in 136ms
+[00:15:18.723] Server  LOG     ✓ Compiled in 51ms
+[00:15:37.015] Server  LOG     ✓ Compiled in 136ms
+[00:15:59.312] Server  LOG     ✓ Compiled in 119ms
+[00:16:37.606] Server  LOG     ✓ Compiled in 48ms
+[00:17:56.420] Server  LOG     ✓ Compiled in 37ms
+[00:18:08.689] Server  LOG     ✓ Compiled in 135ms
+[00:18:13.433] Server  LOG     ✓ Compiled in 41ms
+[00:19:26.700] Server  LOG     ✓ Compiled in 178ms
+[00:19:26.756] Browser ERROR   Invalid value for prop %s on <%s> tag. Either remove it from the element, or pass a string or number value to keep it in the DOM. For details, see https://react.dev/link/attribute-behavior  `value` textarea
+[00:19:35.720] Server  LOG     ✓ Compiled in 99ms
+[00:19:40.851] Server  LOG     ✓ Compiled in 55ms
+[00:22:02.975] Server  LOG     ✓ Compiled in 51ms
+[00:22:18.644] Server  LOG     ✓ Compiled in 123ms
+[00:22:25.496] Server  LOG     ✓ Compiled in 37ms
+[00:22:44.359] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:24:10.729] Server  LOG     ✓ Compiled in 44ms
+[00:24:18.151] Server  LOG     ✓ Compiled in 130ms
+[00:24:44.596] Server  LOG     ✓ Compiled in 54ms
