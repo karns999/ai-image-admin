@@ -1,3 +1,90 @@
-[00:00:10.620] Server  WARN    ⚠ The "middleware" file convention is deprecated. Please use "proxy" instead. Learn more: https://nextjs.org/docs/messages/middleware-to-proxy
-[00:00:12.308] Server  LOG     ✓ Ready in 8s
-[00:12:17.900] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:00:01.055] Server  WARN    ⚠ The "middleware" file convention is deprecated. Please use "proxy" instead. Learn more: https://nextjs.org/docs/messages/middleware-to-proxy
+[00:00:01.190] Server  LOG     ✓ Ready in 895ms
+[00:00:04.230] Server  WARN    Using the user object as returned from supabase.auth.getSession() or from some supabase.auth.onAuthStateChange() events could be insecure! This value comes directly from the storage medium (usually cookies on the server) and may not be authentic. Use supabase.auth.getUser() instead which authenticates the data by contacting the Supabase Auth server.
+[00:00:04.601] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:00:16.059] Server  ERROR   [generate] error: Error: 404 生图失败 — <!DOCTYPE html><html lang="en"><head><meta charSet="utf-8"/><meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1"/><link rel="stylesheet" href="/_next/static/css/cda3af1
+[00:01:10.652] Server  LOG     ✓ Compiled in 37ms
+[00:01:15.057] Server  LOG     ✓ Compiled in 80ms
+[00:01:21.196] Server  LOG     ✓ Compiled in 42ms
+[00:01:56.316] Server  LOG     ✓ Compiled in 49ms
+[00:02:10.810] Server  LOG     ✓ Compiled in 34ms
+[00:02:51.740] Server  ERROR   [generate] error: Error: 404 生图失败 — <!DOCTYPE html><html lang="en"><head><meta charSet="utf-8"/><meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1"/><link rel="stylesheet" href="/_next/static/css/cda3af1
+[00:04:48.288] Server  LOG     ✓ Compiled in 57ms
+[00:05:45.140] Server  LOG     ✓ Compiled in 50ms
+[00:06:11.563] Server  WARN    Using the user object as returned from supabase.auth.getSession() or from some supabase.auth.onAuthStateChange() events could be insecure! This value comes directly from the storage medium (usually cookies on the server) and may not be authentic. Use supabase.auth.getUser() instead which authenticates the data by contacting the Supabase Auth server.
+[00:06:11.853] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:06:53.815] Server  LOG     ✓ Compiled in 47ms
+[00:07:56.013] Server  LOG     ✓ Compiled in 211ms
+[00:08:02.181] Server  LOG     ✓ Compiled in 321ms
+[00:09:16.601] Server  WARN    Using the user object as returned from supabase.auth.getSession() or from some supabase.auth.onAuthStateChange() events could be insecure! This value comes directly from the storage medium (usually cookies on the server) and may not be authentic. Use supabase.auth.getUser() instead which authenticates the data by contacting the Supabase Auth server.
+[00:09:16.839] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:10:35.943] Server  LOG     ✓ Compiled in 46ms
+[00:11:07.695] Server  LOG     ✓ Compiled in 50ms
+[00:11:16.285] Server  LOG     ✓ Compiled in 43ms
+[00:12:01.273] Server  WARN    Using the user object as returned from supabase.auth.getSession() or from some supabase.auth.onAuthStateChange() events could be insecure! This value comes directly from the storage medium (usually cookies on the server) and may not be authentic. Use supabase.auth.getUser() instead which authenticates the data by contacting the Supabase Auth server.
+[00:12:01.560] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:12:16.757] Server  ERROR   [generate] error: Error: 未获取到图片数据
+[00:13:03.621] Server  LOG     ✓ Compiled in 37ms
+[00:13:09.448] Server  LOG     ✓ Compiled in 47ms
+[00:14:11.193] Server  LOG     ✓ Compiled in 30ms
+[00:14:15.932] Server  LOG     ✓ Compiled in 23ms
+[00:15:00.277] Server  LOG     ✓ Compiled in 39ms
+[00:15:06.124] Server  LOG     ✓ Compiled in 38ms
+[00:19:49.739] Server  LOG     ✓ Compiled in 47ms
+[00:19:55.629] Server  LOG     ✓ Compiled in 55ms
+[00:20:55.695] Server  LOG     ✓ Compiled in 60ms
+[00:21:03.550] Server  LOG     ✓ Compiled in 45ms
+[00:21:09.361] Server  LOG     ✓ Compiled in 41ms
+[00:24:01.833] Server  WARN    Using the user object as returned from supabase.auth.getSession() or from some supabase.auth.onAuthStateChange() events could be insecure! This value comes directly from the storage medium (usually cookies on the server) and may not be authentic. Use supabase.auth.getUser() instead which authenticates the data by contacting the Supabase Auth server.
+[00:24:02.364] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:25:11.757] Server  LOG     ✓ Compiled in 85ms
+[00:25:19.835] Server  LOG     ✓ Compiled in 46ms
+[00:26:18.590] Server  LOG     ✓ Compiled in 48ms
+[00:26:18.699] Browser ERROR   ./src/app/(dashboard)/generate/page.tsx:601:1
+Parsing ecmascript source code failed
+  599 |   );
+  600 | }
+> 601 |
+      | ^
+
+Expected '}', got '<eof>'
+
+Import traces:
+  Client Component Browser:
+    ./src/app/(dashboard)/generate/page.tsx [Client Component Browser]
+    ./src/app/(dashboard)/generate/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/app/(dashboard)/generate/page.tsx [Client Component SSR]
+    ./src/app/(dashboard)/generate/page.tsx [Server Component]
+[00:26:23.017] Server  LOG     ✓ Compiled in 43ms
+[00:26:23.018] Browser ERROR   ./src/app/(dashboard)/generate/page.tsx:601:1
+Parsing ecmascript source code failed
+  599 |   );
+  600 | }
+> 601 |
+      | ^
+
+Expected '}', got '<eof>'
+
+Import traces:
+  Client Component Browser:
+    ./src/app/(dashboard)/generate/page.tsx [Client Component Browser]
+    ./src/app/(dashboard)/generate/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/app/(dashboard)/generate/page.tsx [Client Component SSR]
+    ./src/app/(dashboard)/generate/page.tsx [Server Component]
+[00:26:24.149] Server  WARN    Using the user object as returned from supabase.auth.getSession() or from some supabase.auth.onAuthStateChange() events could be insecure! This value comes directly from the storage medium (usually cookies on the server) and may not be authentic. Use supabase.auth.getUser() instead which authenticates the data by contacting the Supabase Auth server.
+[00:26:33.923] Server  WARN    Using the user object as returned from supabase.auth.getSession() or from some supabase.auth.onAuthStateChange() events could be insecure! This value comes directly from the storage medium (usually cookies on the server) and may not be authentic. Use supabase.auth.getUser() instead which authenticates the data by contacting the Supabase Auth server.
+[00:26:34.193] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:26:58.572] Server  LOG     ✓ Compiled in 69ms
+[00:28:49.245] Server  ERROR   [generate] error: Error: 未获取到图片数据
+[00:29:36.976] Server  WARN    Using the user object as returned from supabase.auth.getSession() or from some supabase.auth.onAuthStateChange() events could be insecure! This value comes directly from the storage medium (usually cookies on the server) and may not be authentic. Use supabase.auth.getUser() instead which authenticates the data by contacting the Supabase Auth server.
+[00:29:37.267] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:30:22.854] Server  LOG     ✓ Compiled in 46ms
+[00:31:36.967] Server  LOG     ✓ Compiled in 41ms
+[00:32:20.561] Server  WARN    Using the user object as returned from supabase.auth.getSession() or from some supabase.auth.onAuthStateChange() events could be insecure! This value comes directly from the storage medium (usually cookies on the server) and may not be authentic. Use supabase.auth.getUser() instead which authenticates the data by contacting the Supabase Auth server.
+[00:32:20.854] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:32:53.429] Server  WARN    Using the user object as returned from supabase.auth.getSession() or from some supabase.auth.onAuthStateChange() events could be insecure! This value comes directly from the storage medium (usually cookies on the server) and may not be authentic. Use supabase.auth.getUser() instead which authenticates the data by contacting the Supabase Auth server.
+[00:32:53.630] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold

@@ -1,3 +1,11 @@
 {
-  "/(dashboard)/generate/page": "app/(dashboard)/generate/page.js"
+  "/(dashboard)/generate/page": "app/(dashboard)/generate/page.js",
+  "/(dashboard)/history/page": "app/(dashboard)/history/page.js",
+  "/(dashboard)/prompts/page": "app/(dashboard)/prompts/page.js",
+  "/api/generate/route": "app/api/generate/route.js",
+  "/api/models/route": "app/api/models/route.js",
+  "/api/prompts/route": "app/api/prompts/route.js",
+  "/api/suggest/route": "app/api/suggest/route.js",
+  "/api/tasks/[id]/route": "app/api/tasks/[id]/route.js",
+  "/api/tasks/route": "app/api/tasks/route.js"
 }

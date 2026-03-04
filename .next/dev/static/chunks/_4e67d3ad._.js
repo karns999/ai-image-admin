@@ -33,15 +33,29 @@ function GeneratePage() {
     const [refImages, setRefImages] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useState"])([]);
     const [title, setTitle] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useState"])("");
     const [systemPrompt, setSystemPrompt] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useState"])(DEFAULT_SYSTEM_PROMPT);
-    const [prompts, setPrompts] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useState"])([
-        ""
-    ]);
+    const [prompts, setPrompts] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useState"])([]);
+    const [templatePrompts, setTemplatePrompts] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useState"])([]);
     const whiteInputRef = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useRef"])(null);
     const refInputRef = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useRef"])(null);
+    (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useEffect"])({
+        "GeneratePage.useEffect": ()=>{
+            fetch("/api/prompts").then({
+                "GeneratePage.useEffect": (r)=>r.json()
+            }["GeneratePage.useEffect"]).then({
+                "GeneratePage.useEffect": (data)=>{
+                    if (Array.isArray(data)) {
+                        setTemplatePrompts(data.map({
+                            "GeneratePage.useEffect": (t)=>t.prompt
+                        }["GeneratePage.useEffect"]));
+                    }
+                }
+            }["GeneratePage.useEffect"]);
+        }
+    }["GeneratePage.useEffect"], []);
     function addPrompt() {
         setPrompts((prev)=>[
                 ...prev,
-                ""
+                templatePrompts[prev.length] ?? ""
             ]);
     }
     function removePrompt(i) {
@@ -49,6 +63,9 @@ function GeneratePage() {
     }
     function updatePrompt(i, val) {
         setPrompts((prev)=>prev.map((p, idx)=>idx === i ? val : p));
+    }
+    function resetPrompts() {
+        setPrompts(templatePrompts);
     }
     function handleWhiteImage(e) {
         const file = e.target.files?.[0];
@@ -73,7 +90,7 @@ function GeneratePage() {
                         children: "AI 生成操作面板"
                     }, void 0, false, {
                         fileName: "[project]/src/app/(dashboard)/generate/page.tsx",
-                        lineNumber: 49,
+                        lineNumber: 64,
                         columnNumber: 9
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
@@ -81,13 +98,13 @@ function GeneratePage() {
                         children: "↻ 刷新数据"
                     }, void 0, false, {
                         fileName: "[project]/src/app/(dashboard)/generate/page.tsx",
-                        lineNumber: 50,
+                        lineNumber: 65,
                         columnNumber: 9
                     }, this)
                 ]
             }, void 0, true, {
                 fileName: "[project]/src/app/(dashboard)/generate/page.tsx",
-                lineNumber: 48,
+                lineNumber: 63,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -117,30 +134,30 @@ function GeneratePage() {
                                                 strokeWidth: 3
                                             }, void 0, false, {
                                                 fileName: "[project]/src/app/(dashboard)/generate/page.tsx",
-                                                lineNumber: 84,
+                                                lineNumber: 99,
                                                 columnNumber: 23
                                             }, this) : isProcessing ? /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
                                                 className: "w-2 h-2 rounded-full bg-orange-400 animate-pulse"
                                             }, void 0, false, {
                                                 fileName: "[project]/src/app/(dashboard)/generate/page.tsx",
-                                                lineNumber: 86,
+                                                lineNumber: 101,
                                                 columnNumber: 23
                                             }, this) : isActive ? /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
                                                 className: "w-2 h-2 rounded-full bg-blue-500"
                                             }, void 0, false, {
                                                 fileName: "[project]/src/app/(dashboard)/generate/page.tsx",
-                                                lineNumber: 88,
+                                                lineNumber: 103,
                                                 columnNumber: 23
                                             }, this) : /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
                                                 className: "w-1.5 h-1.5 rounded-full bg-gray-300"
                                             }, void 0, false, {
                                                 fileName: "[project]/src/app/(dashboard)/generate/page.tsx",
-                                                lineNumber: 90,
+                                                lineNumber: 105,
                                                 columnNumber: 23
                                             }, this)
                                         }, void 0, false, {
                                             fileName: "[project]/src/app/(dashboard)/generate/page.tsx",
-                                            lineNumber: 71,
+                                            lineNumber: 86,
                                             columnNumber: 19
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
@@ -151,13 +168,13 @@ function GeneratePage() {
                                             children: step
                                         }, void 0, false, {
                                             fileName: "[project]/src/app/(dashboard)/generate/page.tsx",
-                                            lineNumber: 93,
+                                            lineNumber: 108,
                                             columnNumber: 19
                                         }, this)
                                     ]
                                 }, void 0, true, {
                                     fileName: "[project]/src/app/(dashboard)/generate/page.tsx",
-                                    lineNumber: 66,
+                                    lineNumber: 81,
                                     columnNumber: 17
                                 }, this),
                                 index < steps.length - 1 && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -169,29 +186,29 @@ function GeneratePage() {
                                         }
                                     }, void 0, false, {
                                         fileName: "[project]/src/app/(dashboard)/generate/page.tsx",
-                                        lineNumber: 107,
+                                        lineNumber: 122,
                                         columnNumber: 21
                                     }, this)
                                 }, void 0, false, {
                                     fileName: "[project]/src/app/(dashboard)/generate/page.tsx",
-                                    lineNumber: 106,
+                                    lineNumber: 121,
                                     columnNumber: 19
                                 }, this)
                             ]
                         }, step, true, {
                             fileName: "[project]/src/app/(dashboard)/generate/page.tsx",
-                            lineNumber: 64,
+                            lineNumber: 79,
                             columnNumber: 15
                         }, this);
                     })
                 }, void 0, false, {
                     fileName: "[project]/src/app/(dashboard)/generate/page.tsx",
-                    lineNumber: 57,
+                    lineNumber: 72,
                     columnNumber: 9
                 }, this)
             }, void 0, false, {
                 fileName: "[project]/src/app/(dashboard)/generate/page.tsx",
-                lineNumber: 56,
+                lineNumber: 71,
                 columnNumber: 7
             }, this),
             currentStep === 0 && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -211,14 +228,14 @@ function GeneratePage() {
                                                 children: "*"
                                             }, void 0, false, {
                                                 fileName: "[project]/src/app/(dashboard)/generate/page.tsx",
-                                                lineNumber: 126,
+                                                lineNumber: 141,
                                                 columnNumber: 17
                                             }, this),
                                             "产品白底图（必填）"
                                         ]
                                     }, void 0, true, {
                                         fileName: "[project]/src/app/(dashboard)/generate/page.tsx",
-                                        lineNumber: 125,
+                                        lineNumber: 140,
                                         columnNumber: 15
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("input", {
@@ -229,7 +246,7 @@ function GeneratePage() {
                                         onChange: handleWhiteImage
                                     }, void 0, false, {
                                         fileName: "[project]/src/app/(dashboard)/generate/page.tsx",
-                                        lineNumber: 128,
+                                        lineNumber: 143,
                                         columnNumber: 15
                                     }, this),
                                     whiteImage ? /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -241,12 +258,12 @@ function GeneratePage() {
                                             className: "w-full h-full object-contain"
                                         }, void 0, false, {
                                             fileName: "[project]/src/app/(dashboard)/generate/page.tsx",
-                                            lineNumber: 135,
+                                            lineNumber: 150,
                                             columnNumber: 19
                                         }, this)
                                     }, void 0, false, {
                                         fileName: "[project]/src/app/(dashboard)/generate/page.tsx",
-                                        lineNumber: 130,
+                                        lineNumber: 145,
                                         columnNumber: 17
                                     }, this) : /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
                                         onClick: ()=>whiteInputRef.current?.click(),
@@ -255,18 +272,18 @@ function GeneratePage() {
                                             className: "w-6 h-6"
                                         }, void 0, false, {
                                             fileName: "[project]/src/app/(dashboard)/generate/page.tsx",
-                                            lineNumber: 142,
+                                            lineNumber: 157,
                                             columnNumber: 19
                                         }, this)
                                     }, void 0, false, {
                                         fileName: "[project]/src/app/(dashboard)/generate/page.tsx",
-                                        lineNumber: 138,
+                                        lineNumber: 153,
                                         columnNumber: 17
                                     }, this)
                                 ]
                             }, void 0, true, {
                                 fileName: "[project]/src/app/(dashboard)/generate/page.tsx",
-                                lineNumber: 124,
+                                lineNumber: 139,
                                 columnNumber: 13
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -277,7 +294,7 @@ function GeneratePage() {
                                         children: "参考图（可选，0-3张）"
                                     }, void 0, false, {
                                         fileName: "[project]/src/app/(dashboard)/generate/page.tsx",
-                                        lineNumber: 149,
+                                        lineNumber: 164,
                                         columnNumber: 15
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -291,12 +308,12 @@ function GeneratePage() {
                                                         className: "w-full h-full object-contain"
                                                     }, void 0, false, {
                                                         fileName: "[project]/src/app/(dashboard)/generate/page.tsx",
-                                                        lineNumber: 154,
+                                                        lineNumber: 169,
                                                         columnNumber: 21
                                                     }, this)
                                                 }, i, false, {
                                                     fileName: "[project]/src/app/(dashboard)/generate/page.tsx",
-                                                    lineNumber: 152,
+                                                    lineNumber: 167,
                                                     columnNumber: 19
                                                 }, this)),
                                             refImages.length < 3 && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["Fragment"], {
@@ -310,7 +327,7 @@ function GeneratePage() {
                                                         onChange: handleRefImages
                                                     }, void 0, false, {
                                                         fileName: "[project]/src/app/(dashboard)/generate/page.tsx",
-                                                        lineNumber: 159,
+                                                        lineNumber: 174,
                                                         columnNumber: 21
                                                     }, this),
                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
@@ -320,12 +337,12 @@ function GeneratePage() {
                                                             className: "w-5 h-5"
                                                         }, void 0, false, {
                                                             fileName: "[project]/src/app/(dashboard)/generate/page.tsx",
-                                                            lineNumber: 164,
+                                                            lineNumber: 179,
                                                             columnNumber: 23
                                                         }, this)
                                                     }, void 0, false, {
                                                         fileName: "[project]/src/app/(dashboard)/generate/page.tsx",
-                                                        lineNumber: 160,
+                                                        lineNumber: 175,
                                                         columnNumber: 21
                                                     }, this)
                                                 ]
@@ -333,7 +350,7 @@ function GeneratePage() {
                                         ]
                                     }, void 0, true, {
                                         fileName: "[project]/src/app/(dashboard)/generate/page.tsx",
-                                        lineNumber: 150,
+                                        lineNumber: 165,
                                         columnNumber: 15
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -341,19 +358,19 @@ function GeneratePage() {
                                         children: "参考图会用于增强方案生成效果，最多 3 张"
                                     }, void 0, false, {
                                         fileName: "[project]/src/app/(dashboard)/generate/page.tsx",
-                                        lineNumber: 169,
+                                        lineNumber: 184,
                                         columnNumber: 15
                                     }, this)
                                 ]
                             }, void 0, true, {
                                 fileName: "[project]/src/app/(dashboard)/generate/page.tsx",
-                                lineNumber: 148,
+                                lineNumber: 163,
                                 columnNumber: 13
                             }, this)
                         ]
                     }, void 0, true, {
                         fileName: "[project]/src/app/(dashboard)/generate/page.tsx",
-                        lineNumber: 122,
+                        lineNumber: 137,
                         columnNumber: 11
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -363,7 +380,7 @@ function GeneratePage() {
                                 children: "产品标题"
                             }, void 0, false, {
                                 fileName: "[project]/src/app/(dashboard)/generate/page.tsx",
-                                lineNumber: 175,
+                                lineNumber: 190,
                                 columnNumber: 13
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("input", {
@@ -374,13 +391,13 @@ function GeneratePage() {
                                 className: "w-full border rounded-md px-3 py-2 text-sm outline-none focus:ring-2 focus:ring-blue-300"
                             }, void 0, false, {
                                 fileName: "[project]/src/app/(dashboard)/generate/page.tsx",
-                                lineNumber: 176,
+                                lineNumber: 191,
                                 columnNumber: 13
                             }, this)
                         ]
                     }, void 0, true, {
                         fileName: "[project]/src/app/(dashboard)/generate/page.tsx",
-                        lineNumber: 174,
+                        lineNumber: 189,
                         columnNumber: 11
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -393,7 +410,7 @@ function GeneratePage() {
                                         children: "角色指令"
                                     }, void 0, false, {
                                         fileName: "[project]/src/app/(dashboard)/generate/page.tsx",
-                                        lineNumber: 188,
+                                        lineNumber: 203,
                                         columnNumber: 15
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
@@ -402,13 +419,13 @@ function GeneratePage() {
                                         children: "恢复默认"
                                     }, void 0, false, {
                                         fileName: "[project]/src/app/(dashboard)/generate/page.tsx",
-                                        lineNumber: 189,
+                                        lineNumber: 204,
                                         columnNumber: 15
                                     }, this)
                                 ]
                             }, void 0, true, {
                                 fileName: "[project]/src/app/(dashboard)/generate/page.tsx",
-                                lineNumber: 187,
+                                lineNumber: 202,
                                 columnNumber: 13
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("textarea", {
@@ -418,13 +435,13 @@ function GeneratePage() {
                                 className: "w-full border rounded-md px-3 py-2 text-sm outline-none focus:ring-2 focus:ring-blue-300 resize-none text-gray-600 bg-gray-50"
                             }, void 0, false, {
                                 fileName: "[project]/src/app/(dashboard)/generate/page.tsx",
-                                lineNumber: 196,
+                                lineNumber: 211,
                                 columnNumber: 13
                             }, this)
                         ]
                     }, void 0, true, {
                         fileName: "[project]/src/app/(dashboard)/generate/page.tsx",
-                        lineNumber: 186,
+                        lineNumber: 201,
                         columnNumber: 11
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -437,25 +454,43 @@ function GeneratePage() {
                                         children: "Prompt 指令"
                                     }, void 0, false, {
                                         fileName: "[project]/src/app/(dashboard)/generate/page.tsx",
-                                        lineNumber: 207,
+                                        lineNumber: 222,
                                         columnNumber: 15
                                     }, this),
-                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
-                                        className: "text-xs text-gray-400",
+                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                        className: "flex items-center gap-3",
                                         children: [
-                                            "共 ",
-                                            prompts.length,
-                                            " 套建议"
+                                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
+                                                className: "text-xs text-gray-400",
+                                                children: [
+                                                    "共 ",
+                                                    prompts.length,
+                                                    " 套"
+                                                ]
+                                            }, void 0, true, {
+                                                fileName: "[project]/src/app/(dashboard)/generate/page.tsx",
+                                                lineNumber: 224,
+                                                columnNumber: 17
+                                            }, this),
+                                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
+                                                onClick: resetPrompts,
+                                                className: "text-xs text-gray-400 hover:text-blue-500 transition-colors",
+                                                children: "恢复默认"
+                                            }, void 0, false, {
+                                                fileName: "[project]/src/app/(dashboard)/generate/page.tsx",
+                                                lineNumber: 225,
+                                                columnNumber: 17
+                                            }, this)
                                         ]
                                     }, void 0, true, {
                                         fileName: "[project]/src/app/(dashboard)/generate/page.tsx",
-                                        lineNumber: 208,
+                                        lineNumber: 223,
                                         columnNumber: 15
                                     }, this)
                                 ]
                             }, void 0, true, {
                                 fileName: "[project]/src/app/(dashboard)/generate/page.tsx",
-                                lineNumber: 206,
+                                lineNumber: 221,
                                 columnNumber: 13
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -464,11 +499,14 @@ function GeneratePage() {
                                         className: "flex items-start gap-2",
                                         children: [
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
-                                                className: "text-xs text-gray-400 mt-2.5 w-4 shrink-0",
-                                                children: i + 1
-                                            }, void 0, false, {
+                                                className: "text-xs text-gray-400 mt-2.5 w-24 shrink-0 leading-tight",
+                                                children: [
+                                                    "图片",
+                                                    i + 1
+                                                ]
+                                            }, void 0, true, {
                                                 fileName: "[project]/src/app/(dashboard)/generate/page.tsx",
-                                                lineNumber: 213,
+                                                lineNumber: 236,
                                                 columnNumber: 19
                                             }, this),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("input", {
@@ -479,27 +517,27 @@ function GeneratePage() {
                                                 className: "flex-1 border rounded-md px-3 py-2 text-sm outline-none focus:ring-2 focus:ring-blue-300"
                                             }, void 0, false, {
                                                 fileName: "[project]/src/app/(dashboard)/generate/page.tsx",
-                                                lineNumber: 214,
+                                                lineNumber: 237,
                                                 columnNumber: 19
                                             }, this),
-                                            prompts.length > 1 && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
+                                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
                                                 onClick: ()=>removePrompt(i),
                                                 className: "mt-2 text-gray-300 hover:text-red-400 transition-colors",
                                                 children: "✕"
                                             }, void 0, false, {
                                                 fileName: "[project]/src/app/(dashboard)/generate/page.tsx",
-                                                lineNumber: 222,
-                                                columnNumber: 21
+                                                lineNumber: 244,
+                                                columnNumber: 19
                                             }, this)
                                         ]
                                     }, i, true, {
                                         fileName: "[project]/src/app/(dashboard)/generate/page.tsx",
-                                        lineNumber: 212,
+                                        lineNumber: 235,
                                         columnNumber: 17
                                     }, this))
                             }, void 0, false, {
                                 fileName: "[project]/src/app/(dashboard)/generate/page.tsx",
-                                lineNumber: 210,
+                                lineNumber: 233,
                                 columnNumber: 13
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
@@ -510,20 +548,20 @@ function GeneratePage() {
                                         className: "w-3 h-3"
                                     }, void 0, false, {
                                         fileName: "[project]/src/app/(dashboard)/generate/page.tsx",
-                                        lineNumber: 236,
+                                        lineNumber: 257,
                                         columnNumber: 15
                                     }, this),
                                     " 添加一套"
                                 ]
                             }, void 0, true, {
                                 fileName: "[project]/src/app/(dashboard)/generate/page.tsx",
-                                lineNumber: 232,
+                                lineNumber: 253,
                                 columnNumber: 13
                             }, this)
                         ]
                     }, void 0, true, {
                         fileName: "[project]/src/app/(dashboard)/generate/page.tsx",
-                        lineNumber: 205,
+                        lineNumber: 220,
                         columnNumber: 11
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -543,7 +581,7 @@ function GeneratePage() {
                                     className: "w-3.5 h-3.5"
                                 }, void 0, false, {
                                     fileName: "[project]/src/app/(dashboard)/generate/page.tsx",
-                                    lineNumber: 246,
+                                    lineNumber: 267,
                                     columnNumber: 15
                                 }, this),
                                 "生成建议（",
@@ -552,28 +590,28 @@ function GeneratePage() {
                             ]
                         }, void 0, true, {
                             fileName: "[project]/src/app/(dashboard)/generate/page.tsx",
-                            lineNumber: 242,
+                            lineNumber: 263,
                             columnNumber: 13
                         }, this)
                     }, void 0, false, {
                         fileName: "[project]/src/app/(dashboard)/generate/page.tsx",
-                        lineNumber: 241,
+                        lineNumber: 262,
                         columnNumber: 11
                     }, this)
                 ]
             }, void 0, true, {
                 fileName: "[project]/src/app/(dashboard)/generate/page.tsx",
-                lineNumber: 121,
+                lineNumber: 136,
                 columnNumber: 9
             }, this)
         ]
     }, void 0, true, {
         fileName: "[project]/src/app/(dashboard)/generate/page.tsx",
-        lineNumber: 46,
+        lineNumber: 61,
         columnNumber: 5
     }, this);
 }
-_s(GeneratePage, "bAxbYyw0L8aNJzsYl9/Ph6yHAec=");
+_s(GeneratePage, "4dNS2hC9/BcFuaNKyrTnTCxxhhc=");
 _c = GeneratePage;
 var _c;
 __turbopack_context__.k.register(_c, "GeneratePage");
